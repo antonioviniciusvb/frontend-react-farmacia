@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
-import Categoria from '../../../models/Categoria'
-import { useNavigate, useParams } from 'react-router-dom'
-import { buscar, deletar } from '../../../services/Service'
 import { RotatingLines } from 'react-loader-spinner'
+import { useNavigate, useParams } from 'react-router-dom'
+import Categoria from '../../../models/Categoria'
+import { buscar, deletar } from '../../../services/Service'
+import { ToastAlerta } from '../../../utils/ToastAlerta'
 
 function DeletarCategoria() {
 
@@ -19,7 +20,7 @@ function DeletarCategoria() {
             await buscar(`/categorias/${id}`, setCategoria)
         } catch (error: any) {
 
-            alert('Erro ao buscar Categoria')
+            ToastAlerta('Erro ao buscar Categoria', 'erro')
         }
     }
 
@@ -40,10 +41,10 @@ function DeletarCategoria() {
         try {
             await deletar(`/categorias/${id}`)
 
-            alert('Categoria apagado com sucesso')
+            ToastAlerta('Categoria apagado com sucesso', 'sucesso')
 
         } catch (error) {
-            alert('Erro ao apagar o Categoria')
+            ToastAlerta('Erro ao apagar o Categoria', 'erro')
         }
 
         setIsLoading(false)

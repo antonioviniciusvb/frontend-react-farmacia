@@ -1,3 +1,4 @@
+import ListaProdutos from "../../components/produtos/listaProdutos/ListaProdutos"
 
 function Home() {
     return (
@@ -22,6 +23,7 @@ function Home() {
             </div>
           </div>
         </div>
+        {<ListaProdutos />}
       </>
     )
   }

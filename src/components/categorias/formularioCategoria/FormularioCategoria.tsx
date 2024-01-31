@@ -1,8 +1,9 @@
 import { ChangeEvent, useEffect, useState } from 'react';
-import { atualizar, buscar, cadastrar } from '../../../services/Service';
+import { RotatingLines } from 'react-loader-spinner';
 import { useNavigate, useParams } from 'react-router-dom';
 import Categoria from '../../../models/Categoria';
-import { RotatingLines } from 'react-loader-spinner';
+import { atualizar, buscar, cadastrar } from '../../../services/Service';
+import { ToastAlerta } from '../../../utils/ToastAlerta';
 
 
 
@@ -44,22 +45,22 @@ function FormularioCategoria() {
             try {
                 await atualizar(`/categorias`, categoria, setCategoria)
 
-                alert('Categoria atualizado com sucesso')
+                ToastAlerta('Categoria atualizado com sucesso', 'sucesso')
             
             } catch (error: any) {
               
-                    alert('Erro ao atualizar a Categoria')
+                ToastAlerta('Erro ao atualizar a Categoria', 'erro')
             }
 
         } else {
             try {
                 await cadastrar(`/categorias`, categoria, setCategoria)
 
-                alert('Categoria cadastrado com sucesso')
+                ToastAlerta('Categoria cadastrado com sucesso', 'sucesso')
 
             } catch (error: any) {
    
-                    alert('Erro ao cadastrar a Categoria')
+                ToastAlerta('Erro ao cadastrar a Categoria', 'erro')
                 
             }
         }
