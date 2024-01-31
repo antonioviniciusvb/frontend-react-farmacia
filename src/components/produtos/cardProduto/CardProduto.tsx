@@ -9,7 +9,7 @@ function CardProduto({post}: CardProdutoProps) {
   return (
     <div className='border-slate-900 border flex flex-col rounded overflow-hidden justify-between'>
       <div>
-        <div className="flex w-full bg-green-900 text-white py-2 px-4 items-center gap-4">
+        <div className="flex w-full bg-green-700 text-white py-2 px-4 items-center gap-4">
           <h3 className='text-lg font-bold text-center uppercase '>{post.nome}</h3>
         </div>
         <div className='p-4'>

@@ -3,11 +3,12 @@ import { toast } from 'react-toastify';
 export function ToastAlerta(mensagem: string, tipo: string) {
   switch (tipo) {
     case 'sucesso':
+      
       toast.success(mensagem, {
         position: 'top-right',
         autoClose: 2000,
         hideProgressBar: false,
-        closeOnClick: true,
+        closeOnClick: false,
         pauseOnHover: false,
         draggable: false,
         theme: 'colored',

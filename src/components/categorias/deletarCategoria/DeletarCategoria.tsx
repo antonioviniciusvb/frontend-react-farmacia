@@ -41,7 +41,7 @@ function DeletarCategoria() {
         try {
             await deletar(`/categorias/${id}`)
 
-            ToastAlerta('Categoria apagado com sucesso', 'sucesso')
+            ToastAlerta('Categoria apagada com sucesso', 'sucesso')
 
         } catch (error) {
             ToastAlerta('Erro ao apagar o Categoria', 'erro')

@@ -6,7 +6,6 @@ import { atualizar, buscar, cadastrar } from '../../../services/Service';
 import { ToastAlerta } from '../../../utils/ToastAlerta';
 
 
-
 function FormularioCategoria() {
 
     const [categoria, setCategoria] = useState<Categoria>({} as Categoria);
@@ -45,7 +44,7 @@ function FormularioCategoria() {
             try {
                 await atualizar(`/categorias`, categoria, setCategoria)
 
-                ToastAlerta('Categoria atualizado com sucesso', 'sucesso')
+                ToastAlerta('Categoria atualizada com sucesso', 'sucesso')
             
             } catch (error: any) {
               
@@ -56,7 +55,7 @@ function FormularioCategoria() {
             try {
                 await cadastrar(`/categorias`, categoria, setCategoria)
 
-                ToastAlerta('Categoria cadastrado com sucesso', 'sucesso')
+                ToastAlerta('Categoria cadastrada com sucesso', 'sucesso')
 
             } catch (error: any) {
    

@@ -78,7 +78,7 @@ function FormularioProduto() {
         if (id != undefined) {
             try {
                 await atualizar(`/produtos`, produto, setProduto);
-                ToastAlerta('Produto atualizada com sucesso', 'sucesso');
+                ToastAlerta('Produto atualizado com sucesso', 'sucesso');
 
             } catch (error: any) {
                 ToastAlerta('Erro ao atualizar a Produto', 'erro');
@@ -88,7 +88,7 @@ function FormularioProduto() {
             try {
 
                 await cadastrar(`/produtos`, produto, setProduto);
-                ToastAlerta('Produto cadastrada com sucesso', 'sucesso');
+                ToastAlerta('Produto cadastrado com sucesso', 'sucesso');
 
             } catch (error: any) {
 
