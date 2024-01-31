@@ -5,7 +5,7 @@ function Navbar() {
 
     return (
         <>
-            <div className='w-full bg-green-700 text-white flex justify-center py-4'>
+            <div className='w-full bg-green-900 text-white flex justify-center py-4'>
 
                 <div className="container flex justify-between text-lg">
                         <Link to="/home" className="text-2xl font-bold flex gap-4"><FlowerTulip size={48} weight='bold' />Farmacia</Link>
