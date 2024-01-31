@@ -1,4 +1,5 @@
 import ListaProdutos from "../../components/produtos/listaProdutos/ListaProdutos"
+import ModalProduto from "../../components/produtos/modalProduto/ModalProduto"
 
 function Home() {
     return (
@@ -10,8 +11,8 @@ function Home() {
               <p className="text-xl">Aqui você encontra os remedios!</p>
   
               <div className="flex justify-around gap-4">
-                <div className="rounded text-white border-white border-solid border-2 px-4 py-2">
-                  Novo Produto
+                <div className="rounded px-4 py-2">
+                <ModalProduto/>
                   </div>
               </div>
             </div>

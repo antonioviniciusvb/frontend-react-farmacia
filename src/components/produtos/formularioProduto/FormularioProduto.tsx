@@ -109,25 +109,37 @@ function FormularioProduto() {
 
             <form onSubmit={gerarNovaProduto} className="flex flex-col w-1/2 gap-4">
                 <div className="flex flex-col gap-2">
-                    <label htmlFor="titulo">Titulo da produto</label>
+                    <label htmlFor="nome">Nome do produto</label>
                     <input
                         value={produto.nome}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
                         type="text"
-                        placeholder="Titulo"
-                        name="titulo"
+                        placeholder="Nome"
+                        name="nome"
                         required
                         className="border-2 border-slate-700 rounded p-2"
                     />
                 </div>
                 <div className="flex flex-col gap-2">
-                    <label htmlFor="titulo">Texto da produto</label>
+                    <label htmlFor="preco">Preço do produto</label>
                     <input
-                        value={produto.nome}
+                        value={produto.preco}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
                         type="text"
-                        placeholder="Texto"
-                        name="texto"
+                        placeholder="Preço"
+                        name="preco"
+                        required
+                        className="border-2 border-slate-700 rounded p-2"
+                    />
+                </div>
+                <div className="flex flex-col gap-2">
+                    <label htmlFor="preco">Foto do produto</label>
+                    <input
+                        value={produto.foto}
+                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                        type="text"
+                        placeholder="Foto"
+                        name="foto"
                         required
                         className="border-2 border-slate-700 rounded p-2"
                     />
