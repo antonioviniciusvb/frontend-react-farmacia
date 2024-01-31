@@ -38,7 +38,7 @@ function FormularioProduto() {
     }
 
     async function buscarCategorias() {
-        await buscar('/categorias/all', setCategorias);
+        await buscar('/categorias', setCategorias);
     }
 
     useEffect(() => {
@@ -144,7 +144,7 @@ function FormularioProduto() {
 
                     </select>
                 </div>
-                <button disabled={carregandoCategoria} type='submit' className='rounded disabled:bg-slate-200 bg-sky-700 hover:bg-sky-800 text-white font-bold w-1/2 mx-auto flex py-2 justify-center'>
+                <button disabled={carregandoCategoria} type='submit' className='rounded disabled:bg-slate-200 bg-green-700 hover:bg-green-800 text-white font-bold w-1/2 mx-auto flex py-2 justify-center'>
 
                     {isLoading ? <RotatingLines
                         strokeColor="white"
